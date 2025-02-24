@@ -1,0 +1,125 @@
+/* General Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #035225;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+/* Stopwatch Container */
+.stopwatch-container {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+}
+    /* Stopwatch Container - Circular Design 
+.stopwatch-container {
+    width: 350px;  /* Ensure width and height are the same */
+    /*height: 350px;
+    border-radius: 50%; /* Makes it a circle */
+    /*background: #1e1e1e;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}*/
+
+
+
+/* Display Timer */
+#display {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 10px;
+    background: #333;
+    border-radius: 8px;
+}
+
+/* Controls (Buttons) */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.controls button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+}
+
+.controls button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+/* Lap List */
+h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    background: #222;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Lap Items */
+.lap-item {
+    padding: 10px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #444;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #display {
+        font-size: 2.5rem;
+    }
+
+    .controls button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    ul {
+        max-height: 120px;
+    }
+
+    .lap-item {
+        font-size: 1rem;
+    }
+}
